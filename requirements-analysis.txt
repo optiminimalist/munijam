@@ -1,0 +1,9 @@
+-r requirements.txt
+scikit-learn
+numpy
+scipy
+jupyter
+matplotlib
+seaborn
+shapely
+geopy
