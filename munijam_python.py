@@ -1,13 +1,13 @@
 from flask import Flask, render_template
 
-from nextbus import get_vehicle_locations
+from nextbus import parse_muni_data, get_raw_muni_data
 
 app = Flask(__name__)
 
 
 @app.route('/')
 def hello_world():
-    vehicles = get_vehicle_locations()
+    vehicles = parse_muni_data(get_raw_muni_data())
     return render_template('main.html', vehicles=vehicles)
 
 
