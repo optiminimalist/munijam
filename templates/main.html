@@ -16,7 +16,7 @@
 var map, pointarray, heatmap;
 
 // a shortened version of the data for Google's taxi example
-var taxiData = [
+var muniData = [
     {% for vehicle in vehicles %}
     new google.maps.LatLng({{ vehicle.lat }}, {{ vehicle.lon }})
         {% if not loop.last %}
@@ -38,7 +38,7 @@ function initialize() {
   // the map and where to place it
   map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-  var pointArray = new google.maps.MVCArray(taxiData);
+  var pointArray = new google.maps.MVCArray(muniData);
 
   // what data for the heatmap and how to display it
   heatmap = new google.maps.visualization.HeatmapLayer({
