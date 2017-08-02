@@ -7,3 +7,5 @@ Werkzeug==0.12.2
 nextbus
 ipython
 gunicorn
+django
+shapely

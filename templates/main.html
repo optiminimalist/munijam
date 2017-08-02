@@ -37,6 +37,8 @@
             attribution: '&copy; ' + mapLink + ' Contributors',
             maxZoom: 18,
             }).addTo(map);
+        <script>
+            </body></html>
         var heat = L.heatLayer([
              {% for vehicle in vehicles %}
                 [{{ vehicle.lat }}, {{ vehicle.lon }}, 5]
